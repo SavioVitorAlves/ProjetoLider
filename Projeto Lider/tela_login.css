@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(255, 68, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+}
+
+.Area-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: chocolate;
+    width: 355px;
+    height: 320px;
+    padding: 35px;
+    border-radius: 35px;
+
+}   
+.login form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+} 
+.login input{
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    height: 35px;
+    outline: ;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    padding-left: 15px;
+}
+
+.login img{
+    width: 115px;
+    height: auto;
+    
+
+}
+.login ::placeholder{
+    color: rgb(160, 160, 160);
+}
