@@ -49,3 +49,8 @@ body{
 .login ::placeholder{
     color: rgb(160, 160, 160);
 }
+form[type="submit"]{
+    display: block;
+    background-color: beige;
+}
+    
