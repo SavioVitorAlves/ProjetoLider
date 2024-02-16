@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+h1{
+    color:rgb(255, 255, 255);
+    font-size: 54px;
+}
+body{
+    background-color:rgb(255, 152, 55);
+}
+.child{
+    height: 90px;
+    background-color: rgb(243, 99, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arealogo{
+    background-color: rgb(245, 52, 18);
+    height: 120px;
+    width: 140px;
+    display:flex;
+}
+.confg{
+    font-size: 14px;
+    background-color: rgb(221, 207, 187);
+    padding: 15px;
+    border-width: 0px;
+    margin-top: 12px;
+    margin-left: 32px;
+    width: 250px;
+    font-weight: bold;
+}
+.descricao{
+    margin-top: 24px;
+    margin-left: 40px;
+    width: 320px;
+    height: 20px;
+
+}
