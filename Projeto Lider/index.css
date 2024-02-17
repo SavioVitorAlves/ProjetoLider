@@ -41,7 +41,7 @@ body{
 
 .descricao2{
     margin-top: 24px;
-    margin-left: 40px;
+    margin-left: 90px;
     width: 140px;
     height: 20px;
 }
@@ -80,17 +80,10 @@ body{
 }
 .soma{
     background-color: rgb(57, 199, 57);
-    grid-column: 3/4;
-    grid-row: 1/2;
     margin: 0 auto;
     padding: 5px;
     height: 10px;
     width: 180px;
-
     
-}
-.botoes{
-    display: grid;
-    grid-template-columns: 300px 200px;
-    gap: 50px;
+    
 }
