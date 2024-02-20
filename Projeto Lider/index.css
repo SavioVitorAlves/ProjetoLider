@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+}
+h1{
+    color:rgb(255, 255, 255);
+    font-size: 54px;
+}
+body{
+    background-color:rgb(255, 152, 55);
+}
+.child{
+    height: 90px;
+    background-color: rgb(243, 99, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arealogo{
+    background: rgb(245, 52, 18);
+    height: 130px;
+    width: 140px;
+    border-radius: 1rem;
+    
+    
+}
+.confg{
+    font-size: 14px;
+    background-color: rgb(221, 207, 187);
+    padding: 15px;
+    border-width: 0px;
+    margin-top: 12px;   
+    margin-left: 32px;
+    width: 250px;
+    font-weight: bold;
+}
+.descricao{
+    margin-top: 24px;
+    margin-left: 40px;
+    width: 320px;
+    height: 20px;
+
+}
+
+.descricao2{
+    margin-top: 24px;
+    margin-left: 90px;
+    width: 140px;
+    height: 20px;
+}
+
+.descricao3{
+    margin-top: 24px;
+    margin-left: 40px;
+    width: 190px;
+    height: 20px;
+
+}
+.descricao4{
+    margin-top: 24px;
+    margin-left: 40px;
+    width: 150px;
+    height: 20px;
+
+}
+.operacao{
+    margin-top: 100px;
+    margin-left: 250px;
+    width: 180px;
+    height: 65px;
+    background-color: rgb(33, 121, 15);
+    font-size: 36px;
+    border-width: 0px;
+}
+.operacao2{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 180px;
+    height: 65px;
+    background-color: rgb(33, 121, 15);
+    font-size: 36px;
+    border-width: 0px;
+}
+.soma{
+    background-color: rgb(57, 199, 57);
+    margin-right: 6rem;
+    padding: 5px;
+    height: 90px;
+    width: 180px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-bottom: 10px;
+    
+}
+.soma2{
+    background-color: rgb(255, 30, 0);
+    margin-right: 6rem;
+    padding: 5px;
+    height: 90px;
+    width: 180px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-bottom: 10px;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.inf{
+display: flex;
+flex-direction: row;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;    
+    
+    height: 30vh;
+}
+.total{
+    margin-top: 80px;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 45rem;
+    
+}
+p{
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 55px;
+    text-transform: uppercase;
+}

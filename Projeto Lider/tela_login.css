@@ -34,10 +34,12 @@ body{
     background-color: rgb(255, 255, 255);
     border: none;
     height: 35px;
-    outline: ;
+    color: black;
     border-radius: 15px;
     color: rgb(0, 0, 0);
     padding-left: 15px;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .login img{
