@@ -34,11 +34,13 @@ body{
     background-color: rgb(255, 255, 255);
     border: none;
     height: 35px;
-    outline: ;
     border-radius: 15px;
     color: rgb(0, 0, 0);
     padding-left: 15px;
+    font-weight: bolder;
+    cursor: pointer;
 }
+
 
 .login img{
     width: 115px;
@@ -49,8 +51,9 @@ body{
 .login ::placeholder{
     color: rgb(160, 160, 160);
 }
-form[type="submit"]{
-    display: block;
-    background-color: beige;
+form[type="submite" ] {
+    border-image: linear-gradient(to right, #f7f7f8  ,#c9ced4) ;
+    border: 1px solid transparent;
+    font-weight: bold;
+    text-align: center;
 }
-    
