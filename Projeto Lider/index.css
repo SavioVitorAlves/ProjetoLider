@@ -6,11 +6,11 @@ h1{
     font-size: 54px;
 }
 body{
-    background-color:rgb(255, 152, 55);
+    background-color:rgba(255, 123, 0, 0.959);
 }
 .child{
     height: 90px;
-    background-color: rgb(243, 99, 42);
+    background-color: rgb(255, 72, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,32 +36,48 @@ body{
 }
 
 .descricao{
-    margin-top: 24px;
+    margin-top: 15px;
+    background-color: aliceblue;
+    border: none;
     margin-left: 40px;
+    padding-left: 15px;
     width: 320px;
-    height: 20px;
+    height: 35px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 25px;
     
 }
 
 .descricao2{
-    margin-top: 24px;
+    margin-top: 15px;
     margin-left: 90px;
     width: 140px;
-    height: 20px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+
+    
 }
 
 .descricao3{
     margin-top: 24px;
     margin-left: 40px;
     width: 190px;
-    height: 20px;
-
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    padding-left: 15px;
+    font-weight: bolder;
 }
 .descricao4{
     margin-top: 24px;
     margin-left: 40px;
     width: 150px;
     height: 20px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bolder;
 
 }
 .operacao{
@@ -69,24 +85,26 @@ body{
     margin-left: 250px;
     width: 180px;
     height: 65px;
-    background-color: rgb(33, 121, 15);
+    background-color: rgb(29, 119, 12);
     font-size: 36px;
     border-width: 0px;
-    border-radius: 5px;
+    border-radius: 35px;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
+    cursor: pointer;
 }
 .operacao2{
     margin-top: 100px;
     margin-left: 100px;
     width: 180px;
     height: 65px;
-    background-color: rgb(33, 121, 15);
+    background-color: rgb(29, 165, 2);
     font-size: 36px;
     border-width: 0px;
-    border-radius: 5px;
+    border-radius: 35px;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
+    cursor: pointer;
 }
 .operacao:hover{
     transform: scale(1.05, 1.05);
@@ -103,7 +121,8 @@ body{
     justify-content: center;
     margin-bottom: 15px;
     margin-bottom: 10px;
-    
+    border-radius: 25px;
+
 }
 .soma2{
     background-color: rgb(255, 30, 0);
@@ -114,6 +133,7 @@ body{
     justify-content: center;
     margin-bottom: 15px;
     margin-bottom: 10px;
+    border-radius: 25px;
     
 }
 .main{
