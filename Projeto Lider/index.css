@@ -85,7 +85,7 @@ body{
     margin-left: 250px;
     width: 180px;
     height: 65px;
-    background-color: rgb(29, 119, 12);
+    background-color: rgb(37, 224, 0);
     font-size: 36px;
     border-width: 0px;
     border-radius: 35px;
@@ -98,7 +98,7 @@ body{
     margin-left: 100px;
     width: 180px;
     height: 65px;
-    background-color: rgb(29, 165, 2);
+    background-color: rgb(37, 223, 0);
     font-size: 36px;
     border-width: 0px;
     border-radius: 35px;
@@ -113,7 +113,7 @@ body{
     transform: scale(1.05, 1.05);
 }
 .soma{
-    background-color: rgb(57, 199, 57);
+    background-color: rgb(10, 218, 10);
     margin-right: 6rem;
     padding: 5px;
     height: 90px;
@@ -122,6 +122,8 @@ body{
     margin-bottom: 15px;
     margin-bottom: 10px;
     border-radius: 25px;
+    font-size: 15px;
+    font-weight: bolder;
 
 }
 .soma2{
@@ -134,7 +136,7 @@ body{
     margin-bottom: 15px;
     margin-bottom: 10px;
     border-radius: 25px;
-    
+    font-weight: bolder;
 }
 .main{
     display: flex;
@@ -172,8 +174,8 @@ p{
 }
 
 .arealogo img{
-    height: 130px;
-    width: 140px;
+    height: 115px;
+    width: 120px;
     align-items: center;
     justify-content: center;
     margin: 0px;
@@ -182,8 +184,25 @@ nav{
     display: flex;
     padding: 0px;
     margin-top: 62px;
-    
+    height: 110px;
+       
 }
-article{
+  
+  button{
+    border-radius: 55px;
     margin-top: 15px;
+    height: 50px;
+    width: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
+h1{
+    font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+ 
+        
