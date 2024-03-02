@@ -23,6 +23,10 @@ body{
     box-shadow: 1px 1px 10px black;
     
 }
+.container .arealogo img{
+    margin-left: 10px;
+}
+
 .confg{
     font-size: 14px;
     background-color: rgb(221, 207, 187);
@@ -124,7 +128,16 @@ body{
     border-radius: 25px;
     font-size: 15px;
     font-weight: bolder;
-
+    display: flel;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+span{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 .soma2{
     background-color: rgb(255, 30, 0);

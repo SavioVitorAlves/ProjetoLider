@@ -71,3 +71,12 @@
         var button = document.getElementById("btn-03");
         button.style.backgroundColor = 'rgb(221, 207, 187)'
     });
+    
+    const resultado = document.querySelector(".resultado");
+    const descricao3 = document.querySelector(".descricao3");
+    
+    function clicar(){
+        
+        const somatorio = parseInt(resultado) + parseInt(descricao3);
+        document.querySelector(".resultado").innerHTML = somatorio;
+    }
