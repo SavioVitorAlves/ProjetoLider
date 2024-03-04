@@ -56,7 +56,7 @@
 /*botao 04*/
     document.getElementById("btn-04").addEventListener("click", function() {
         var button = document.getElementById("btn-04");
-        var randomColor = '#fff' ; // Gera uma cor aleatória em hexadecimal
+        var randomColor = '#fff' ; 
         button.style.backgroundColor = 'rgb(255, 152, 55)';
     });
     document.getElementById("btn-04").addEventListener("click", function(){
@@ -72,11 +72,11 @@
         button.style.backgroundColor = 'rgb(221, 207, 187)'
     });
     
-    const resultado = document.querySelector(".resultado");
-    const descricao3 = document.querySelector(".descricao3");
-    
-    function clicar(){
-        
-        const somatorio = parseInt(resultado) + parseInt(descricao3);
-        document.querySelector(".resultado").innerHTML = somatorio;
-    }
+    const result = document.querySelector('resultado');
+
+    function somavalores(){ 
+    document.getElementById("sum").addEventListener("click", function(){
+        const somatorio = result.innerText + valor.innerText;
+        addDigit(somatorio);
+    })
+}
