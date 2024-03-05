@@ -72,11 +72,26 @@
         button.style.backgroundColor = 'rgb(221, 207, 187)'
     });
     
-    const result = document.querySelector('resultado');
-
+    
     function somavalores(){ 
-    document.getElementById("sum").addEventListener("click", function(){
-        const somatorio = result.innerText + valor.innerText;
-        addDigit(somatorio);
-    })
-}
+        var result = document.getElementById("valor").value;
+        var text = document.getElementById("resultado").innerHTML;
+        var clean = "";
+        var somatorio = (parseFloat(result) + parseFloat(text)).toFixed(2).replace(".", ",");
+        document.getElementById("resultado").innerHTML = somatorio;
+        document.getElementById("valor").value = clean;
+    }
+    function somavalores2(){ 
+        var result = document.getElementById("valor").value;
+        var text = document.getElementById("resultado2").innerHTML;
+        var somatorio = (parseFloat(result) + parseFloat(text)).toFixed(2).replace(".", ",");
+        document.getElementById("resultado2").innerHTML = somatorio;
+    }
+    function ponto() {
+        var char = document.getElementById("valor").value.length;
+        
+        if (char == 2) {
+            document.getElementById("valor").value = document.getElementById("valor").value + ".";
+    
+        }
+    }

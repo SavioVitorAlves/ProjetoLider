@@ -39,20 +39,23 @@
                     <input class="descricao2" type="date" id="task_name" name="task_name" placeholder="Data"/>
                     
                 </grup>
-                    <input class="descricao3" type="text" id="valor" name="task_name" placeholder="Valor:"/>
+                    <input class="descricao3" type="text" id="valor" onkeyup="ponto();" name="task_name" placeholder="Valor:"/>
 
                     </section>  
             <group class="total">
                 <div class="soma">
                     <center>Valor Total
-                    <span id="resultado">0,00</span>
+                <div id="resultado" >0,00</div>
                 </div>
-                <div class="soma2"> <center>Valor Total</div>
+                <div class="soma2"> 
+                    <center>Valor Total
+                    <div id="resultado2" >0,00</div>
+                </div>
             </group>   
         </section>
         <div>
-            <button class="operacao" id="sum" onclick="buttom">+</button>
-            <button class="operacao2" id="subtract" onclick="Clicar2()">-</button>
+            <button class="operacao" id="sum" onclick="somavalores();">+</button>
+            <button class="operacao2" id="subtract" onclick="somavalores2();">-</button>
         </div>
     </article>
     <script src="index.js"></script>
