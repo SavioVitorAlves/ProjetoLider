@@ -1,75 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 *{
     margin: 0;
 }
-h1{
-    color:rgb(255, 255, 255);
-    font-size: 54px;
-}
 body{
-    background-color:rgba(255, 123, 0, 0.959);
+    background-color:#FF5C00;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 .child{
-    height: 90px;
-    background-color: rgb(255, 72, 0);
+    height: 70px;
+    background-color: #d9d9d9;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 .arealogo{
-    background: rgb(255, 255, 255);
-    height: 130px;
-    width: 140px;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 10px black;
-    
+    height: 90px;
+    width: 100px;
+    margin: -25px 0 0 60px;
 }
-.container .arealogo img{
-    margin-left: 10px;
+.arealogo img{
+    height: 100px;
+    width: 105px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+h1{
+    text-transform: uppercase;
+    margin-left: 300px;
+    font-size: 4rem;
+    font-family: 'Koulen';
+    letter-spacing: 4px;
+}
+/*------- SECTION SUN---------*/
+main .caixa{
+    height:470px;
+    width: 500px;
+    text-align: center;
+    position: relative;
 }
 
 .confg{
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgb(221, 207, 187);
-    padding: 6px;
-    border-width: 0px   ;
-    margin-top: 0px;   
-    margin-left: 0px;
-    width: 250px;
+    width: 170px;
     font-weight: bold;
-
+    border: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.confg:hover{
+    background-color: rgb(161, 160, 158);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.inf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inf_data{
+    display: flex;
+    justify-content: space-between;
+    width: 404px;
 }
 
 .descricao{
     margin-top: 15px;
     background-color: aliceblue;
     border: none;
-    margin-left: 40px;
-    padding-left: 15px;
-    width: 320px;
+    width: 400px;
     height: 35px;
     font-weight: bolder;
     cursor: pointer;
-    border-radius: 25px;
-    
 }
-
 .descricao2{
     margin-top: 15px;
-    margin-left: 90px;
-    width: 140px;
+    width: 180px;
     height: 35px;
-    border-radius: 25px;
     border: none;
-
-    
 }
 
 .descricao3{
-    margin-top: 24px;
-    margin-left: 40px;
-    width: 190px;
+    margin-top: 15px;
+    width: 180px;
     height: 35px;
-    border-radius: 25px;
+    
     border: none;
     padding-left: 15px;
     font-weight: bolder;
@@ -79,33 +107,30 @@ body{
     margin-left: 40px;
     width: 150px;
     height: 20px;
-    border-radius: 15px;
+    
     border: none;
     font-weight: bolder;
 
 }
 .operacao{
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 20px;
     width: 180px;
-    height: 65px;
-    background-color: rgb(37, 224, 0);
+    height: 50px;
+    background-color: #025005;
     font-size: 36px;
     border-width: 0px;
-    border-radius: 35px;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     cursor: pointer;
 }
 .operacao2{
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
     width: 180px;
-    height: 65px;
-    background-color: rgb(37, 223, 0);
+    height: 50px;
+    background-color: #FF0000;
     font-size: 36px;
     border-width: 0px;
-    border-radius: 35px;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     cursor: pointer;
@@ -116,106 +141,48 @@ body{
 .operacao2:hover{
     transform: scale(1.05, 1.05);
 }
-.soma{
-    background-color: rgb(10, 218, 10);
-    margin-right: 6rem;
-    padding: 5px;
-    height: 90px;
-    width: 180px;
-    justify-content: center;
-    margin-bottom: 15px;
-    margin-bottom: 10px;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: bolder;
-    display: flel;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-span{
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.soma2{
-    background-color: rgb(255, 30, 0);
-    margin-right: 6rem;
-    padding: 5px;
-    height: 90px;
-    width: 180px;
-    justify-content: center;
-    margin-bottom: 15px;
-    margin-bottom: 10px;
-    border-radius: 25px;
-    font-weight: bolder;
-}
-.main{
-    display: flex;
-    flex-direction: column;
-}
-.inf{
-display: flex;
-flex-direction: row;
-}
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;    
-    
-    height: 30vh;
-}
-.total{
-    margin-top: 80px;
-    
-}
-.container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 150px;
-    
-}
-p{
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    margin-top: 55px;
-    text-transform: uppercase;
-}
-
-.arealogo img{
-    height: 115px;
-    width: 120px;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-}
 nav{
     display: flex;
     padding: 0px;
-    margin-top: 62px;
-    height: 110px;
-       
+    position: absolute;
+    bottom: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-  
-  button{
-    border-radius: 55px;
-    margin-top: 15px;
-    height: 50px;
-    width: 15px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
+/*------- SECTION SUN---------*/
+main .sun{
+    background-color: #d9d9d9;
+    height:470px;
+    width: 500px;
+    position: relative;
 }
-h1{
-    font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+.soma{
+    background-color: #025005;
+    padding: 5px;
+    height: 40px;
+    width: 250px;
+    font-weight: bolder;
+    
+}
+.soma2{
+    background-color: #FF0000;
+    padding: 5px;
+    height: 40px;
+    width: 250px;
+    font-weight: bolder;
+}
+.total{
+    display: flex;
 }
 
- 
-        
+h2{
+    font-family: 'Koulen';
+    font-size: 44pt;
+    margin: 20px 0 20px 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #315E32;
+    height: 30px;
+    width: 500px;
+}    

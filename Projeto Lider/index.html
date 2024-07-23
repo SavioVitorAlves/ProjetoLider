@@ -3,61 +3,66 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Fluxo de Caixa</title>
-    <h1><center>Fluxo de Caixa</center></h1>
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="website icon" type="jpg" href="Lider.jpg"/>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="website icon" type="jpg" href="./imgs/Lider.jpg"/>
+    <link rel="stylesheet" href="./css/index.css"/>
     
 </head>
 <body>
     <header class="child" id="cabecalho">
-        <nav >
-                <button class="confg" id="btn-01">Fluxo de Caixa</button>
-                <button class="confg" id="btn-02">Relatorio Mensal</button>
-                <button class="confg" id="btn-03">Relatorio Anual</button>
-                <button class="confg" id="btn-04">Notinha</button>
-            
-        </nav>
-        <div class="container">
-            <div></div>
-            <section  class="arealogo">
-                <img  type="jpg" src="lider-sem-fundo.jpg"/>
-            </section>
-        </div>
-       
+            <div  class="arealogo">
+                <img  type="jpg" src="./imgs/lider-sem-fundo.jpg"/>
+            </div>
+            <h1>comercial Lider</h1>
     </header>
-    <article>
 
-        <section class="header" >
-            <section class="main">
+    <main>
+        <section class="caixa">
+            <div class="main">
+                <h2>Caixa Aberto</h2>
                 <grup class="inf">
                     <input class="descricao" type="text" id="task_name" name="task_name" placeholder="Descrição (opcional)"/>
-                    <input class="descricao2" type="date" id="task_name" name="task_name" placeholder="Data"/>
-                    
+                    <div class="inf_data">
+                        <input class="descricao2" type="date" id="task_name" name="task_name" placeholder="Data"/>
+                        <input class="descricao3" type="text" id="valor" onkeyup="ponto();" name="task_name" placeholder="Valor:"/>
+                    </div>
                 </grup>
-                    <input class="descricao3" type="text" id="valor" onkeyup="ponto();" name="task_name" placeholder="Valor:"/>
-
-                    </section>  
-            <group class="total">
-                <div class="soma">
-                    <center>Valor Total
-                <div id="resultado" >0,00</div>
-                </div>
-                <div class="soma2"> 
-                    <center>Valor Total
-                    <div id="resultado2" >0,00</div>
-                </div>
-            </group>   
+            </div>
+            <div>
+                <button class="operacao" id="sum" onclick="somavalores();">+</button>
+                <button class="operacao2" id="subtract" onclick="somavalores2();">-</button>
+            </div>
+            <nav >
+                <a href="./view/mensal.html" class="confg" id="btn-02">Relatorio Mensal</a>
+                <a href="./view/anual.html" class="confg" id="btn-03">Relatorio Anual</a>
+                <a class="confg" id="btn-04">Notinha</a>
+            
+            </nav>
         </section>
-        <div>
-            <button class="operacao" id="sum" onclick="somavalores();">+</button>
-            <button class="operacao2" id="subtract" onclick="somavalores2();">-</button>
-        </div>
-    </article>
-    <script src="index.js"></script>
+        <section class="sun">
+                <group class="total">
+                    <div class="soma">
+                        <center>Valor Total
+                    <div id="resultado" >0,00</div>
+                    </div>
+                    <div class="soma2"> 
+                        <center>Valor Total
+                        <div id="resultado2" >0,00</div>
+                    </div>
+                </group>
+                <div>
+
+                </div>
+                <footer>
+
+                </footer>   
+        </section>
+    </main>
+    <script src="./server/index.js"></script>
 </body>
 </html>
