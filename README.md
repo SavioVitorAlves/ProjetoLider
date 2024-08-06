@@ -40,3 +40,5 @@ $ nodemon index.js
 
 # A aplicação inciará na porta:8081 - acesse <http://localhost:8081>
 ```
+# Link sobre Node js
+https://1drv.ms/t/s!AiEa_cXwt9fCjZY7dF7x57bWhgEE0Q?e=3OLnU8
