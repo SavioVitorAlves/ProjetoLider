@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/banner.png" />
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="Projeto Lider/imgs/Lider.jpg" />
 </h1>
 <h1 align="center">Projeto Lider</h1>
 <p align="center"> Projeto Lider, projeto desenvolvido para o comercial Lider de Santa Fé, o projeto tem o intuito de armazenar as vendas do dia do comercio e assim poder receber relatorios e analises 
