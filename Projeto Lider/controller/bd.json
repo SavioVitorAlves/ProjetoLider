@@ -1,0 +1,71 @@
+{
+    "transacoes":[
+        {
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },
+        {
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },
+        {
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },{
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },{
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },{
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        },{
+            "descricao": "descricao",
+            "data": "15/02/2024",
+            "preco": "12,36"
+        },
+        {
+            "descricao": "descricao",
+            "data": "20/05/2024",
+            "preco": "30,99"
+        }
+
+    ]
+}

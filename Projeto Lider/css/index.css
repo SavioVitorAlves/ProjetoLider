@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oswald:wght@200..700&display=swap');
 *{
     margin: 0;
 }
@@ -173,7 +173,31 @@ main .sun{
 .total{
     display: flex;
 }
-
+.transacoes{
+    height: 390px;
+    width: 100%;
+    overflow: auto;
+}
+.item{
+    display: flex;
+    padding-top: 10px;
+    font-family: 'Oswald';
+}
+.desc{
+    width: 230px;
+    padding-left: 20px;
+    text-transform:capitalize;
+    border-right: 1px solid black;
+}
+.date{
+    width: 150px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+.val{
+    text-align: center;
+    width: 80px;
+}
 h2{
     font-family: 'Koulen';
     font-size: 44pt;

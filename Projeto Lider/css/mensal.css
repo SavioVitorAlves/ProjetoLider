@@ -5,6 +5,12 @@
 body{
     background-color:#FF5C00;
 }
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
 .child{
     height: 70px;
     background-color: #d9d9d9;
@@ -31,3 +37,95 @@ h1{
     font-family: 'Koulen';
     letter-spacing: 4px;
 }
+h2{
+    font-family: 'Koulen';
+    font-size: 36pt;
+    margin: 0;
+}
+main .caixa{
+    height:470px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.confg{
+    font-size: 16px;
+    background-color: rgb(221, 207, 187);
+    width: 170px;
+    font-weight: bold;
+    border: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.confg:hover{
+    background-color: rgb(161, 160, 158);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.close{
+    display: flex;
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+.grafico{
+    height: 250px;
+    width: 450px;
+    background-color: #d9d9d9;
+}
+.verificar{
+    height: 30px;
+    width: 90px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Koulen';
+    font-size: 12pt;
+    letter-spacing: 1px;
+}
+.filtro{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.mes{
+    display: flex;
+    gap: 5px;
+}
+.mes label{
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-family: 'koulen';
+}
+.mes input{
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+}
+/*------- SECTION SUN---------*/
+main .sun{
+    background-color: #d9d9d9;
+    height:470px;
+    width: 600px;
+    position: relative;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #315E32;
+    height: 30px;
+    width: 600px;
+}    
