@@ -18,8 +18,8 @@
     <section class="caixa">
         <div class="main">
             <h2>Relatorio Mensal</h2>
-            <form id="formMes" class="filtro" method="post">
-                <div id="formMes" class="mes">
+            <form id="formMes" class="filtro" method="post" action="/filtro">
+                <div class="mes">
                     <label for="mes">mes referente:</label>
                     <input type="month" id="mes" name="mes">
                 </div>
@@ -38,11 +38,11 @@
             <footer>
                 <div class="totais">
                     <p>Entrada Mensal</p>
-                    <div id="input" ></div>
+                    <div id="inputMes" ></div>
                 </div>
                 <div class="totais"> 
                     <p>Saida Mensal</p>
-                    <div id="output" ></div>
+                    <div id="outputMes" ></div>
                 </div>
             </footer>   
     </section>
