@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const Postagem = require("./models/Post")
 
 const path = require('path');
+const { log } = require("console");
 
 //bosy parser
 app.use(bodyParser.urlencoded({extended: false}))
@@ -18,7 +19,7 @@ app.get("/html", function(req, res){
     res.sendFile(path.join(__dirname, "../Projeto Lider/index.html"));
 });
 
-app.post("/add", function(req, res){
+app.post("/add/:tipo", function(req, res){
     
     let price =  req.body.valor
 
@@ -30,10 +31,14 @@ app.post("/add", function(req, res){
         return res.status(400).json({ error: 'Preço inválido' });
     }
 
+    let tipo = req.params.tipo
+    console.log(tipo);
+    
     Postagem.create({
         descricao: req.body.descricao,
         valor: price,
-        data: req.body.data
+        data: req.body.data,
+        tipo: req.params.tipo
     }).then(function(){
         res.redirect("/");
     }).catch(function(erro){
@@ -50,26 +55,7 @@ app.get("/data", async (req, res)=>{
         res.status(500).json({ error: "Ocorreu um erro: " + error });
     }
 });
-/*fetch("http://localhost:8081/data")
-    .then(response => response.json())
-    .then(dados => {
-    //PEGANDO DIV DE ARMAZENAMENTO DOS DADOS
-    let sale = document.getElementById("sale");
-    
-    dados.forEach(postagens => {
-        let itemDiv = document.createElement('div');
-        itemDiv.classList.add("item");
-        itemDiv.innerHTML = 
-        `
-            <div class="item">
-                <p class="desc">${postagens.descricao}</p>
-                <p class="date">${new Date(postagem.data).toLocaleDateString()}</p>
-                <p class="val">${postagens.valor.toFixed(2)}</p>
-            </div>
-        `
-        sale.appendChild(itemDiv);
-    });  
-}).catch(error => console.error('Erro ao carregar as postagens:', error));*/
+
 //PORTA DE FUNCIONAMENTO DO SERVIDOR
 const PORT = 8081
 app.listen(PORT, function(){

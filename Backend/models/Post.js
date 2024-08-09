@@ -9,6 +9,9 @@ const Postagem = bd.sequelize.define('Transacoes', {
     },
     data:{
         type: bd.Sequelize.DATE
+    },
+    tipo:{
+        type: bd.Sequelize.STRING
     }
 });
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oswald:wght@200..700&display=swap');
 *{
     margin: 0;
 }
@@ -93,6 +93,7 @@ main .caixa{
     font-family: 'Koulen';
     font-size: 12pt;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .filtro{
     display: flex;
@@ -119,13 +120,62 @@ main .sun{
     height:470px;
     width: 600px;
     position: relative;
+    overflow: hidden;
 }
-
-
+main .sun .item{
+    display: flex;
+    padding-top: 10px;
+    font-family: 'Oswald';
+}
+.desc{
+    width: 250px;
+    padding-left: 20px;
+    text-transform:capitalize;
+    border-right: 1px solid black;
+}
+.date{
+    width: 180px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+.val{
+    text-align: center;
+    width: 90px;
+}
+.totais{
+    background-color: transparent;
+    padding: 5px;
+    height: auto;
+    width: 300px;
+    /*font-weight: bolder;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.totais p{
+    font-size: 17px;
+    color: #fff;
+    font-family: "Oswald";
+}
+.tipo1{
+    height: 15px;
+    width: 15px;
+    background-color: #FF0000;
+    margin-top: 7px;
+    margin-left: 35px;
+}
+.tipo2{
+    height: 15px;
+    width: 15px;
+    background-color: #025005;
+    margin-top: 7px;
+    margin-left: 35px;
+}
 footer{
     position: absolute;
     bottom: 0;
     background-color: #315E32;
     height: 30px;
     width: 600px;
+    display: flex;
 }    

@@ -25,7 +25,7 @@
         <section class="caixa">
             <div class="main">
                 <h2>Caixa Aberto</h2>
-                <form id="myForm" class="inf" action="/add" method="POST">
+                <form id="myForm" class="inf"  method="POST">
                     <input class="descricao" type="text" id="task_name" name="descricao" placeholder="Descrição (opcional)"/>
                     <div class="inf_data">
                         <input class="descricao2" type="date" id="task_name" name="data" placeholder="Data"/>
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <button class="operacao" id="sum" onclick="">+</button>
-                <button class="operacao2" id="subtract" onclick="somavalores2();">-</button>
+                <button class="operacao2" id="subtract" onclick="">-</button>
             </div>
             <nav >
                 <a href="./view/mensal.html" class="confg" id="btn-02">Relatorio Mensal</a>
@@ -47,22 +47,31 @@
         <section class="sun">
                 <group class="total">
                     <div class="soma">
-                        <center>Valor Total
-                    <div id="resultado" >0,00</div>
+                        <center>Entrada Diaria
+                        <div id="resultado" ></div>
                     </div>
                     <div class="soma2"> 
-                        <center>Valor Total
-                        <div id="resultado2" >0,00</div>
+                        <center>Saida Diaria
+                        <div id="resultado2" ></div>
+                        
                     </div>
                 </group>
                 <div class="transacoes" id="sale">
                     
                 </div>
                 <footer>
-
+                    <div class="totais">
+                        <p>Entrada Mensal</p>
+                        <div id="input" ></div>
+                    </div>
+                    <div class="totais"> 
+                        <p>Saida Mensal</p>
+                        <div id="output" ></div>
+                    </div>
                 </footer>   
         </section>
     </main>
     <script src="./controller/index.js"></script>
+    <script src="./controller/database.js"></script>
 </body>
 </html>

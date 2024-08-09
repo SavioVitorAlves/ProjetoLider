@@ -170,6 +170,35 @@ main .sun{
     width: 250px;
     font-weight: bolder;
 }
+.totais{
+    background-color: transparent;
+    padding: 5px;
+    height: auto;
+    width: 250px;
+    /*font-weight: bolder;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.totais p{
+    font-size: 17px;
+    color: #fff;
+    font-family: "Oswald";
+}
+.tipo1{
+    height: 15px;
+    width: 15px;
+    background-color: #FF0000;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+.tipo2{
+    height: 15px;
+    width: 15px;
+    background-color: #025005;
+    margin-top: 7px;
+    margin-left: 20px;
+}
 .total{
     display: flex;
 }
@@ -184,7 +213,7 @@ main .sun{
     font-family: 'Oswald';
 }
 .desc{
-    width: 230px;
+    width: 210px;
     padding-left: 20px;
     text-transform:capitalize;
     border-right: 1px solid black;
@@ -209,4 +238,5 @@ footer{
     background-color: #315E32;
     height: 30px;
     width: 500px;
+    display: flex;
 }    

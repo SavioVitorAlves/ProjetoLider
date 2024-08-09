@@ -18,13 +18,13 @@
     <section class="caixa">
         <div class="main">
             <h2>Relatorio Mensal</h2>
-            <div class="filtro">
-                <div class="mes">
+            <form id="formMes" class="filtro" method="post">
+                <div id="formMes" class="mes">
                     <label for="mes">mes referente:</label>
-                    <input type="month" id="mes">
+                    <input type="month" id="mes" name="mes">
                 </div>
-                <button class="verificar">verificar</button>
-            </div>
+                <button id="verificar" class="verificar">verificar</button>
+            </form>
             <div class="grafico"></div>
         </div>
         <div class="close">
@@ -32,13 +32,22 @@
         </div>
     </section>
     <section class="sun">
-            <div>
+            <div id="saleMes">
 
             </div>
             <footer>
-
+                <div class="totais">
+                    <p>Entrada Mensal</p>
+                    <div id="input" ></div>
+                </div>
+                <div class="totais"> 
+                    <p>Saida Mensal</p>
+                    <div id="output" ></div>
+                </div>
             </footer>   
     </section>
 </main>
+<script src="../controller/index.js"></script>
+<script src="../controller/database.js"></script>
 </body>
 </html>

@@ -24,40 +24,39 @@
     
         }
     }
-//CONECTANDO COM JSON
-fetch("/data")
-    .then(response => response.json())
-    .then(dados => {
-        // PEGANDO DIV DE ARMAZENAMENTO DOS DADOS
-        let sale = document.getElementById("sale");
-        
-        dados.forEach(postagem => { // Use "postagem" para referenciar cada item individual
-            let itemDiv = document.createElement('div');
-            itemDiv.classList.add("item");
-            itemDiv.innerHTML = 
-            `
-                <div class="item">
-                    <p class="desc">${postagem.descricao}</p>
-                    <p class="date">${new Date(postagem.data).toLocaleDateString()}</p>
-                    <p class="val">${postagem.valor}</p>
-                </div>
-            `;
-            sale.appendChild(itemDiv);
-        });  
-    })
-    .catch(error => console.error('Erro ao carregar as postagens:', error));
 
-
-//ENVIANDO FORMULARIO
+    //ENVIANDO FORMULARIO PRO BANCO DE DADOS (RECEITA)
 document.getElementById('sum').addEventListener('click', function(event) {
-    event.preventDefault()//previne o envio antecipado da formulario 
+    event.preventDefault()//previne o envio antecipado da formulario
+    
+    // Adicione o parâmetro `tipo` à URL de ação do formulário
+    const tipo = 'verde'; // Substitua pelo valor desejado
+    document.getElementById('myForm').action = `/add/${tipo}`;
+
     // Submete o formulário manualmente
     document.getElementById('myForm').submit();
     
 });
+//ENVIANDO FORMULARIO PRO BANCO DE DADOS (DESPESSAS)
 document.getElementById('subtract').addEventListener('click', function(event) {
     event.preventDefault()//previne o envio antecipado da formulario 
-    // Submete o formulário manualmente
-    document.getElementById()
     
+    // Adicione o parâmetro `tipo` à URL de ação do formulário
+    const tipo = 'vermelho'; // Substitua pelo valor desejado
+    document.getElementById('myForm').action = `/add/${tipo}`;
+
+    // Submete o formulário manualmente
+    document.getElementById('myForm').submit();
+});
+
+//ENVIANDO FORMULARIO PRO BANCO DE DADOS (DESPESSAS)
+document.getElementById('verificar').addEventListener('click', function(event) {
+    event.preventDefault()//previne o envio antecipado da formulario 
+    
+    // Adicione o parâmetro `tipo` à URL de ação do formulário
+    let mes = document.getElementById("mes").value;
+    //document.getElementById('formMes').action = `/data/${mes}`;
+  
+    // Submete o formulário manualmente
+    document.getElementById('formMes').submit();
 });
