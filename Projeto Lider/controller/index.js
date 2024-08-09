@@ -1,3 +1,4 @@
+const { log } = require("console");
 
     function somavalores(){ 
         var result = document.getElementById("valor").value;
@@ -49,14 +50,3 @@ document.getElementById('subtract').addEventListener('click', function(event) {
     document.getElementById('myForm').submit();
 });
 
-//ENVIANDO FORMULARIO PRO BANCO DE DADOS (DESPESSAS)
-document.getElementById('verificar').addEventListener('click', function(event) {
-    event.preventDefault()//previne o envio antecipado da formulario 
-    
-    // Adicione o parâmetro `tipo` à URL de ação do formulário
-    let mes = document.getElementById("mes").value;
-    //document.getElementById('formMes').action = `/data/${mes}`;
-  
-    // Submete o formulário manualmente
-    document.getElementById('formMes').submit();
-});

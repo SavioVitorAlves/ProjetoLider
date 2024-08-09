@@ -32,7 +32,6 @@ app.post("/add/:tipo", function(req, res){
     }
 
     let tipo = req.params.tipo
-    console.log(tipo);
     
     Postagem.create({
         descricao: req.body.descricao,
@@ -55,6 +54,29 @@ app.get("/data", async (req, res)=>{
         res.status(500).json({ error: "Ocorreu um erro: " + error });
     }
 });
+app.post("/filtro", (req, res)=>{
+    try{
+        const mes = req.body.mes; // Captura o valor do input "mes"
+        res.redirect(`/view/mensal.html?mes=${mes}`); // Redireciona para mesal.html com o valor de mes
+
+        /*const postagens = await Postagem.findAll();
+        res.json(postagens);*/
+    }catch(error){
+        res.status(500).json({ error: "Ocorreu um erro: " + error });
+    }
+});
+app.post("/filtroAno", (req, res)=>{
+    try{
+        const ano = req.body.mes; // Captura o valor do input "mes"
+        res.redirect(`/view/anual.html?mes=${ano}`); // Redireciona para mesal.html com o valor de mes
+
+        /*const postagens = await Postagem.findAll();
+        res.json(postagens);*/
+    }catch(error){
+        res.status(500).json({ error: "Ocorreu um erro: " + error });
+    }
+});
+
 
 //PORTA DE FUNCIONAMENTO DO SERVIDOR
 const PORT = 8081
