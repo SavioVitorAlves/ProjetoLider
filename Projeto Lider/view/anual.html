@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mensal.css"/>
+    <link rel="stylesheet" href="../css/anual.css"/>
 
-    <title>Lider | Relatorio Mensal</title>
+    <title>Lider | Relatorio Anual</title>
 </head>
 <body>
     <header class="child" id="cabecalho">
@@ -20,8 +20,8 @@
             <h2>Relatorio Anual</h2>
             <form class="filtro" id="ano" name="ano" method="post" action="/filtroAno">
                 <div class="mes">
-                    <label for="mes">mes referente:</label>
-                    <input type="month" id="ano">
+                    <label for="ano">ano referente:</label>
+                    <input type="month" id="ano" name="ano">
                 </div>
                 <button class="verificar" id="verificar">verificar</button>
             </form>
@@ -32,11 +32,23 @@
         </div>
     </section>
     <section class="sun">
-            <div id="saleAno">
+            <header class="header">
+                <p class="desc2">descrição</p>
+                <p class="val2">entrada</p>
+                <p class="val3">saida</p>
+            </header>
+            <div id="saleAno" class="saleAno">
 
             </div>
             <footer>
-
+                <div class="totais">
+                    <p>Entrada Anual</p>
+                    <div id="inputAno" ></div>
+                </div>
+                <div class="totais"> 
+                    <p>Saida Anual</p>
+                    <div id="outputAno" ></div>
+                </div>
             </footer>   
     </section>
     
