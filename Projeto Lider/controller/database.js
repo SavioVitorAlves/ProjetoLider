@@ -7,7 +7,7 @@ fetch("/data")
         
         dados.forEach(postagem => { // Use "postagem" para referenciar cada item individual
             let itemDiv = document.createElement('div');
-            itemDiv.classList.add("item");
+            //itemDiv.classList.add("item");
             let postagemData = new Date(postagem.data);
             let timezoneOffset = postagemData.getTimezoneOffset() * 60000;
             postagemData = new Date(postagemData.getTime() + timezoneOffset);
@@ -170,10 +170,10 @@ fetch("/data")
 //RELATORIOS
 //RECEBE O MES PARA SER FILTRADO
     document.addEventListener("DOMContentLoaded", function() {
-        console.log("Testando o carregamento de scripts");
+        //console.log("Testando o carregamento de scripts");
         const urlParams = new URLSearchParams(window.location.search);
         const mes = urlParams.get("mes");
-        console.log("Valor de 'mes':", mes); // Esse console.log vai para o console do navegador
+        //console.log("Valor de 'mes':", mes); // Esse console.log vai para o console do navegador
 
         //RECEBE AS TRANSAÇÕES REALIZADAS NOS DIAS DE CADA MES E APRESENTA NA TELA (MENSAL)
         if(mes){
@@ -198,7 +198,7 @@ fetch("/data")
 
                     dados.forEach(postagem => {
                         let itemDiv = document.createElement('div');
-                        itemDiv.classList.add("item");
+                        //itemDiv.classList.add("item");
                         //PEGANDO VALORES VINDO DO BANCO
                         let valor = parseFloat(postagem.valor);
 
@@ -265,64 +265,81 @@ fetch("/data")
         }
     });
 //RECEBE O ANO PARA SER FILTRADO
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     console.log("Testando o carregamento de scripts");
     const urlParams = new URLSearchParams(window.location.search);
     const ano = urlParams.get("ano");
-    console.log("Valor de 'mes':", ano); // Esse console.log vai para o console do navegador
+    console.log("Valor de 'ano':", ano);
 
-    //RECEBE AS TRANSAÇÕES REALIZADAS NOS DIAS DE CADA MES E APRESENTA NA TELA (ANUAL)
-    if(ano){
-        fetch(`/data`)  // Adiciona o mês como parte da URL para pegar os dados corretos
+    if (ano) {
+        fetch(`/data`)
             .then(response => response.json())
             .then(dados => {
-                let sale = document.getElementById("saleAno");  // Div onde os dados serão exibidos
-                    
-                dados.forEach(postagem => {
-                    let itemDiv = document.createElement('div');
-                    itemDiv.classList.add("item");
+                const sale = document.getElementById("saleAno");
+                const nomeMes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+                const meses = Array.from({ length: 12 }, (_, i) => i + 1);
+                const transacoesPorMes = {};
 
-                    // Convertendo a data da postagem para ajustar o fuso horário
+                // Inicializa o objeto para todos os meses com valores zerados
+                meses.forEach(mes => {
+                    transacoesPorMes[mes] = { entradas: 0, saidas: 0 };
+                });
+                console.log(transacoesPorMes);
+                
+                // Processa as transações
+                dados.forEach(postagem => {
                     let postagemData = new Date(postagem.data);
                     let timezoneOffset = postagemData.getTimezoneOffset() * 60000;
                     postagemData = new Date(postagemData.getTime() + timezoneOffset);
-
-                    postagemData.setHours(0, 0, 0, 0);
-
-                    //PEGANDO O MES PARA FAZER A CONVERSÃO
-                    //console.log(postagemData.getMonth());
-                    let postagemMes = postagemData.getMonth() + 1; // +1 porque getMonth() retorna 0-11
+                    let postagemMes = postagemData.getMonth() + 1;
                     let postagemAno = postagemData.getFullYear();
+                    
+                    // PEGANDO DIV DE ARMAZENAMENTO DOS DADOS DO OUTPUT
+                    let output = document.getElementById("outputAno");
+                    let total1 = parseFloat(output.innerHTML) || 0;
+                
+
+                    // PEGANDO DIV DE ARMAZENAMENTO DOS DADOS DO INPUT
+                    let input = document.getElementById("inputAno");
+                    let total = parseFloat(input.innerHTML) || 0;
+
                     let mesAno = ano.split('-');
                     let mesSelecionado = parseInt(mesAno[1]);
                     let anoSelecionado = parseInt(mesAno[0]);
                     console.log(ano +" " +postagemMes + " "+postagemAno +" "+ mesAno +" "+ mesSelecionado + " "+anoSelecionado);
                     // saida : 2024-06 7 2024 2024,06 6 2024
-            
-                    if(mesSelecionado === postagemMes && anoSelecionado === postagemAno){
-                     
-                        //VERIFICAÇÃO DO TIPO DO ITEM
-                        let tipo
-                        if(postagem.tipo === "verde"){
-                            tipo = "tipo2"
-                            
-                        }else{
-                            tipo = "tipo1"
-                        }
 
-                        itemDiv.innerHTML = 
-                            `
-                                <div class="item">
-                                    <div class="${tipo}"></div>
-                                    <p class="desc">${postagem.descricao}</p>
-                                    <p class="date">${postagemData.toLocaleDateString()}</p>
-                                    <p class="val">${postagem.valor}</p>
-                                </div>
-                                `;
-                        sale.appendChild(itemDiv);  // Adiciona o item à div "saleMes"
+                    if (anoSelecionado == postagemAno) {
+                        if (postagem.tipo === "verde") {
+                            transacoesPorMes[postagemMes].entradas += parseFloat(postagem.valor);
+                            total += parseFloat(postagem.valor)
+                        } else {
+                            transacoesPorMes[postagemMes].saidas += parseFloat(postagem.valor);
+                            total1 += parseFloat(postagem.valor)
+                        }
+                        // Atualiza o conteúdo da div com o somatório formatado
+                        output.innerHTML = total1.toFixed(2);
+                        input.innerHTML = total.toFixed(2);
                     }
+                });
+
+                // Renderiza as transações por mês
+                meses.forEach(mes => {
+                    const itemDiv = document.createElement('div');
+                    //itemDiv.classList.add("item");
+
+                    itemDiv.innerHTML = `
+                        <div class="item">
+                            <p class="desc">${nomeMes[mes - 1]}</p>
+                            <p class="val"><p>R$ ${transacoesPorMes[mes].entradas.toFixed(2)}</p></p>
+                            <p class="val"><p>R$ ${transacoesPorMes[mes].saidas.toFixed(2)}</p></p>
+                        </div>
+                    `;
+
+                    sale.appendChild(itemDiv);
+                });
+                
             })
-        })
-        .catch(error => console.error('Erro ao carregar as postagens:', error));
+            .catch(error => console.error('Erro ao carregar as postagens:', error));
     }
-}); */
+});
