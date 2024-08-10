@@ -67,8 +67,8 @@ app.post("/filtro", (req, res)=>{
 });
 app.post("/filtroAno", (req, res)=>{
     try{
-        const ano = req.body.mes; // Captura o valor do input "mes"
-        res.redirect(`/view/anual.html?mes=${ano}`); // Redireciona para mesal.html com o valor de mes
+        const ano = req.body.ano; // Captura o valor do input "mes"
+        res.redirect(`/view/anual.html?ano=${ano}`); // Redireciona para mesal.html com o valor de mes
 
         /*const postagens = await Postagem.findAll();
         res.json(postagens);*/
