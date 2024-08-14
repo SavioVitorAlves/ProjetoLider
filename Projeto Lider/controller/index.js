@@ -1,4 +1,4 @@
-const { log } = require("console");
+
 
     function somavalores(){ 
         var result = document.getElementById("valor").value;
@@ -49,4 +49,48 @@ document.getElementById('subtract').addEventListener('click', function(event) {
     // Submete o formulário manualmente
     document.getElementById('myForm').submit();
 });
+//INSERIR UM NOVO ANO DO SELECT QUANDO CHEGAR UM NOVO ANO
+      // Array para armazenar os anos já adicionados
+      let anosDisponiveis = [];
 
+      // Função para inserir ano no select
+      function inserirAno(ano) {
+          if (!anosDisponiveis.includes(ano)) {
+              anosDisponiveis.push(ano);
+              const anoSelect = document.getElementById('anoSelect');
+              const option = document.createElement('option');
+              option.value = ano;
+              option.textContent = ano;
+              anoSelect.appendChild(option);
+              console.log(`Ano ${ano} foi adicionado ao select.`);
+          }
+      }
+
+      // Função para verificar o ano atual e atualizar o select
+      function verificarAnoAtual() {
+          const anoAtual = new Date().getFullYear();
+          inserirAno(anoAtual);
+      }
+
+      // Verifica o ano atual ao carregar a página
+      document.addEventListener("DOMContentLoaded", function() {
+          verificarAnoAtual();
+
+          // Verifica a mudança de ano a cada 10 segundos (ajuste conforme necessário)
+          setInterval(() => {
+              verificarAnoAtual();
+          }, 10000);
+      });
+
+const menu = document.getElementById('menu');
+const lista = document.getElementById('lista'); 
+        
+    function ativaMenu(){
+        if(lista.style.display == 'none'){
+            lista.style.display = 'block';
+              
+        }else{
+            lista.style.display = 'none';
+              
+        }
+    }
