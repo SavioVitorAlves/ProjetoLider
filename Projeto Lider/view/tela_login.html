@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="jpg" href="Lider.jpg">
-    <link rel="stylesheet" href="tela_login.css">
+    <link rel="website icon" type="jpg" href="http://localhost:8081/static/imgs/Lider.jpg">
+    <link rel="stylesheet" href="http://localhost:8081/static/css/tela_login.css">
     <title>Líder Login</title>
 </head>
 <body>
     <section class="Area-login">
     <div class="login">
          <div>
-            <img src="Lider.jpg">
+            <img src="http://localhost:8081/static/imgs/Lider.jpg">
          </div>
-         <form method="POST">
-            <input type="text" name="nome" placeholder="Insira seu Nome" autofocus>
-            <input type="password" name="senha" placeholder="Insira sua Senha" autofocus>
-            <input type="submit" value="Entrar" placeholder="Entrar" autofocus> 
-            <imput type="submit" onclick="logar">    
+         <form id="login" name="login">
+            <input type="text" name="usuario" placeholder="Insira seu Usuario" id="user">
+            <input type="password" name="senha" placeholder="Insira sua Senha" id="senha">
+            <button  id="entrar" placeholder="Entrar">Entrar</button>     
          </form>
          
     </div>
+    <script src="http://localhost:8081/static/controller/database.js"></script>
+    <script src="http://localhost:8081/static/controller/index.js"></script>
+    
 </body>
     
 </html>

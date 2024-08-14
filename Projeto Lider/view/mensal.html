@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mensal.css"/>
+    <link rel="stylesheet" href="http://localhost:8081/static/css/mensal.css"/>
 
     <title>Lider | Relatorio Mensal</title>
 </head>
 <body>
     <header class="child" id="cabecalho">
         <div  class="arealogo">
-            <img  type="jpg" src="../imgs/lider-sem-fundo.jpg"/>
+            <img  type="jpg" src="http://localhost:8081/static/imgs/lider-sem-fundo.jpg"/>
         </div>
         <h1>comercial Lider</h1>
 </header>
@@ -25,7 +25,9 @@
                 </div>
                 <button id="verificar" class="verificar">verificar</button>
             </form>
-            <div class="grafico"></div>
+            <div class="grafico">
+                <canvas id="graficoMes"></canvas>
+            </div>
         </div>
         <div class="close">
             <a href="../index.html" class="confg" id="btn-02">voltar</a>
@@ -47,7 +49,9 @@
             </footer>   
     </section>
 </main>
-<script src="../controller/index.js"></script>
-<script src="../controller/database.js"></script>
+<script src="http://localhost:8081/static/controller/index.js"></script>
+<script src="http://localhost:8081/static/controller/database.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="http://localhost:8081/static/controller/graficos.js"></script>
 </body>
 </html>

@@ -40,7 +40,17 @@ body{
     font-weight: bolder;
     cursor: pointer;
 }
-
+.login button{
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    height: 35px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    padding-left: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
 
 .login img{
     width: 115px;

@@ -10,18 +10,19 @@ main{
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 .child{
     height: 70px;
     background-color: #d9d9d9;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
     align-items: center;
 }
 .arealogo{
     height: 90px;
     width: 100px;
-    margin: -25px 0 0 60px;
+    margin: -25px 0 0 0;
 }
 .arealogo img{
     height: 100px;
@@ -32,7 +33,7 @@ main{
 }
 h1{
     text-transform: uppercase;
-    margin-left: 300px;
+    /*margin-left: 300px;*/
     font-size: 4rem;
     font-family: 'Koulen';
     letter-spacing: 4px;
@@ -64,6 +65,7 @@ main .caixa{
 .main{
     display: flex;
     flex-direction: column;
+
 }
 .inf{
     display: flex;
@@ -239,4 +241,44 @@ footer{
     height: 30px;
     width: 500px;
     display: flex;
-}    
+}
+/*=========MENU=============*/
+.child span {
+    color: black;
+    cursor: pointer;
+}
+.menu-mobile{
+    background-color: rgba(9, 50, 88, 1);
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    right: 20px;
+    top: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.menu-mobile ul{
+    /*display: flex;
+    flex-direction: row;*/
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+.menu-mobile ul li{
+    padding: 5px 0 5px 0 ;
+}
+.menu-mobile ul li button{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Koulen';
+    font-size: 15px;
+}
+.menu-mobile ul li button:hover{
+    color: #8d8b8b;
+ 
+}

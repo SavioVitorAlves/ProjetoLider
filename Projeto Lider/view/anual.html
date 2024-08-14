@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/anual.css"/>
+    <link rel="stylesheet" href="http://localhost:8081/static/css/anual.css"/>
 
     <title>Lider | Relatorio Anual</title>
 </head>
 <body>
     <header class="child" id="cabecalho">
         <div  class="arealogo">
-            <img  type="jpg" src="../imgs/lider-sem-fundo.jpg"/>
+            <img  type="jpg" src="http://localhost:8081/static/imgs/lider-sem-fundo.jpg"/>
         </div>
         <h1>comercial Lider</h1>
 </header>
@@ -21,11 +21,17 @@
             <form class="filtro" id="ano" name="ano" method="post" action="/filtroAno">
                 <div class="mes">
                     <label for="ano">ano referente:</label>
-                    <input type="month" id="ano" name="ano">
+                    <!--<input type="month" id="ano" name="ano">-->
+                    <select name="ano" id="ano">
+                        <option value="">Selecione...</option>
+                        <option value="2024">2024</option>
+                    </select>
                 </div>
                 <button class="verificar" id="verificar">verificar</button>
             </form>
-            <div class="grafico"></div>
+            <div class="grafico">
+                <canvas id="graficoAno"></canvas>
+            </div>
         </div>
         <div class="close">
             <a href="../index.html" class="confg" id="btn-02">voltar</a>
@@ -53,7 +59,9 @@
     </section>
     
 </main>
-    <script src="../controller/index.js"></script>
-    <script src="../controller/database.js"></script>
+    <script src="http://localhost:8081/static/controller/index.js"></script>
+    <script src="http://localhost:8081/static/controller/database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="http://localhost:8081/static/controller/graficos.js"></script>
 </body>
 </html>

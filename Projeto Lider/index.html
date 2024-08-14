@@ -9,19 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="website icon" type="jpg" href="./imgs/Lider.jpg"/>
-    <link rel="stylesheet" href="./css/index.css"/>
-    
+    <link rel="website icon" type="jpg" href="http://localhost:8081/static/imgs/Lider.jpg"/>
+    <link rel="stylesheet" href="http://localhost:8081/static/css/index.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header class="child" id="cabecalho">
             <div  class="arealogo">
-                <img  type="jpg" src="./imgs/lider-sem-fundo.jpg"/>
+                <img  type="jpg" src="http://localhost:8081/static/imgs/lider-sem-fundo.jpg"/>
             </div>
             <h1>comercial Lider</h1>
+            <span class="material-symbols-outlined" style="font-size: 40px;" id="menu" onclick="ativaMenu()">menu</span>
     </header>
-
     <main>
+        <div class="menu-mobile" id="lista">
+            <ul >
+                <li><button>usuario</button></li>
+                <li><button>Relatorio diario</button></li>
+                <li><button>sair</button></li>
+            </ul>
+        </div>
         <section class="caixa">
             <div class="main">
                 <h2>Caixa Aberto</h2>
@@ -38,8 +45,8 @@
                 <button class="operacao2" id="subtract" onclick="">-</button>
             </div>
             <nav >
-                <a href="./view/mensal.html" class="confg" id="btn-02">Relatorio Mensal</a>
-                <a href="./view/anual.html" class="confg" id="btn-03">Relatorio Anual</a>
+                <a href="http://localhost:8081/static/view/mensal.html" class="confg" id="btn-02">Relatorio Mensal</a>
+                <a href="http://localhost:8081/static/view/anual.html" class="confg" id="btn-03">Relatorio Anual</a>
                 <a class="confg" id="btn-04">Notinha</a>
             
             </nav>
@@ -71,7 +78,8 @@
                 </footer>   
         </section>
     </main>
-    <script src="./controller/index.js"></script>
-    <script src="./controller/database.js"></script>
+    <script src="http://localhost:8081/static/controller/index.js"></script>
+    <script src="http://localhost:8081/static/controller/database.js"></script>
+    <script src="http://localhost:8081/static/controller/dialog.js"></script>
 </body>
 </html>
