@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let postagemData = new Date(postagem.data);
                     let timezoneOffset = postagemData.getTimezoneOffset() * 60000;
                     postagemData = new Date(postagemData.getTime() + timezoneOffset);
-                    let postagemMes = postagemData.getMonth() + 1;
+                    let postagemMes = postagemData.getMonth() +1;
                     let postagemAno = postagemData.getFullYear();
                     
                     // PEGANDO DIV DE ARMAZENAMENTO DOS DADOS DO OUTPUT
@@ -303,13 +303,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     let input = document.getElementById("inputAno");
                     let total = parseFloat(input.innerHTML) || 0;
 
-                    let mesAno = ano.split('-');
+                    /*let mesAno = ano.split('-');
                     let mesSelecionado = parseInt(mesAno[1]);
-                    let anoSelecionado = parseInt(mesAno[0]);
-                    console.log(ano +" " +postagemMes + " "+postagemAno +" "+ mesAno +" "+ mesSelecionado + " "+anoSelecionado);
+                    let anoSelecionado = parseInt(mesAno[0]);*/
+                    //console.log(ano +" " +postagemMes + " "+postagemAno +" "+ mesAno +" "+ mesSelecionado + " "+anoSelecionado);
                     // saida : 2024-06 7 2024 2024,06 6 2024
-
-                    if (anoSelecionado == postagemAno) {
+                    let anoSelecionado = parseInt(ano);
+                    if (ano == postagemAno) {
                         if (postagem.tipo === "verde") {
                             transacoesPorMes[postagemMes].entradas += parseFloat(postagem.valor);
                             total += parseFloat(postagem.valor)
@@ -343,3 +343,23 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Erro ao carregar as postagens:', error));
     }
 });
+//RECEBE OS USUARIOS DO BANCO DE DADOS
+document.getElementById('entrar').addEventListener('click', function(event){
+    event.preventDefault();
+
+    console.log("Testando o codigo de login");
+   
+    const usuario = document.getElementById("user").value;
+    const senha = document.getElementById("senha").value;
+
+        console.log("Valor de 'user':", usuario);
+        console.log("valor da senha: "+ senha);
+        
+            if(usuario === "ADMIN"){
+                window.location.href = '/html';
+            }else{
+                alert("Usuario ou Senhas incorretos!")
+           }
+
+})
+    
