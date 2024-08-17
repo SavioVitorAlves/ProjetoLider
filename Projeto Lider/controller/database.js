@@ -25,15 +25,37 @@ fetch("/data")
 
             itemDiv.innerHTML = 
             `
-                <div class="item">
+                <div id="${postagem.id}" class="item">
                     <div class="${tipo}"></div>
                     <p class="desc">${postagem.descricao}</p>
                     <p class="date">${postagemData.toLocaleDateString()}</p>
                     <p class="val">${postagem.valor}</p>
+                    <a href="#" class="delete" data-id="${postagem.id}"><span class="material-symbols-outlined" style="font-size: 20px; cursor: pointer;" id="menu">delete</span></a> 
                 </div>
             `;
             sale.appendChild(itemDiv);
         });  
+        
+        
+        document.querySelectorAll('.delete').forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.dataset.id;
+
+                fetch(`/items/${itemId}`, {
+                    method: 'DELETE'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        alert(data.message);
+                        document.getElementById(itemId).remove();
+                    }
+                })
+                .catch(error => console.error('Erro ao deletar o item:', error));
+            });
+        });
     })
     .catch(error => console.error('Erro ao carregar as postagens:', error));
 
@@ -349,17 +371,29 @@ document.getElementById('entrar').addEventListener('click', function(event){
 
     console.log("Testando o codigo de login");
    
-    const usuario = document.getElementById("user").value;
-    const senha = document.getElementById("senha").value;
-
-        console.log("Valor de 'user':", usuario);
-        console.log("valor da senha: "+ senha);
-        
-            if(usuario === "ADMIN"){
-                window.location.href = '/html';
-            }else{
-                alert("Usuario ou Senhas incorretos!")
-           }
-
-})
+    const usuario = document.getElementById("user").value.trim().toLowerCase();
+    const pass = document.getElementById("senha").value.trim().toLowerCase();
+    const senha = parseInt(pass);
     
+    console.log("Valor de 'user':", usuario);
+    console.log("valor da senha: "+ typeof senha);
+    fetch(`/user`)
+        .then(response => response.json())
+        .then(dados => {
+            let usuarioEncontrado = false;
+            dados.forEach(user => {
+                console.log(typeof user.senha);
+                console.log("Valor de 'user':", usuario);
+                
+                if(usuario === user.nome.trim().toLowerCase() && senha === user.senha){
+                    usuarioEncontrado = true;
+                    window.location.href = '/html';
+                }
+            });
+            if (!usuarioEncontrado) {
+                console.log("Usuário ou Senha incorretos!");
+            }
+        })
+        .catch(error => console.error('Erro ao carregar os usuarios:', error));
+});
+

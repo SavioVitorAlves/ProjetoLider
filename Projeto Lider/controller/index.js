@@ -94,3 +94,28 @@ const lista = document.getElementById('lista');
               
         }
     }
+
+//ADICIONANDO NOVO USUARIO NO BANCO DE DADOS 
+document.getElementById('adicionar').addEventListener('click', function(event) {
+    event.preventDefault()//previne o envio antecipado da formulario 
+   
+    // Submete o formulário manualmente
+    document.getElementById('novoUsuario').submit();
+});
+
+//SAI DO SISTEMA 
+document.getElementById('close').addEventListener('click', function(event) {
+    event.preventDefault()//previne o envio antecipado da formulario 
+
+    //finaliza a sessão com o usuario no sistema
+    alert("Sistema Finalizado!")
+    window.location.href = '/entrar';
+});
+
+//ENTRA PARA O RELATORIO DIARIO
+document.getElementById("relatorio").addEventListener("click", () => {
+    const element = document.getElementById("conteudo");
+    window.location.href = '/relatorio';
+});
+
+  
