@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+    <link rel="stylesheet" href="http://localhost:8081/static/css/relatorio.css">
+    <title>Relatorio diario</title>
+</head>
+<body>
+    <div id="conteudo" class="conteudo">
+        <header>
+            <img src="http://localhost:8081/static/imgs/lider-sem-fundo.jpg" alt="">
+            <h1>Relatorio diario</h1>
+        </header>
+        <table class="table">
+                <tr>
+                    <th colspan="2" >Comercial Lider</th>
+                </tr>
+                <tr>
+                    <td>Vendedor: <span id="nome">nome</span></td>
+                    <td>Data e Hora: <span id="hora" ></span></td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">Entradas: R$&nbsp;<span id="input"></span></td>
+                    <td>Saidas: R$&nbsp;<span id="output"></span></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Transações</th>
+                </tr>
+          </table>
+          <section class="transacao">
+            <div class="entradas">
+                <h3>Entradas</h3>
+                <div id="entradas" class="style">
+
+                </div>
+            </div>
+            <div class="saidas">
+                <h3>Saidas</h3>
+                <div id="saidas" class="style">
+
+                </div>
+            </div>
+          </section>
+          <section class="rodape">
+            <p>Comercial Lider - Rua tal numero tal - Nome do Proprietario</p>
+            <p>CNPJ/CPF: 456.789.123.25 - Telefone: (63) 99105-3652</p>
+          </section>
+        <div class="opt">
+            <button id="sair" class="btn">Sair</button>
+            <button id="imprimir" class="btn">Imprimir</button>
+        </div>
+          
+    </div>
+    
+    <script src="http://localhost:8081/static/controller/index.js"></script>
+    <script src="http://localhost:8081/static/controller/relatorioPDF.js"></script>
+</body>
+</html>
