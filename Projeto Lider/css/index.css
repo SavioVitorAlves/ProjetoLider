@@ -154,14 +154,14 @@ nav{
 main .sun{
     background-color: #d9d9d9;
     height:470px;
-    width: 500px;
+    width: 600px;
     position: relative;
 }
 .soma{
     background-color: #025005;
     padding: 5px;
     height: 40px;
-    width: 250px;
+    width: 300px;
     font-weight: bolder;
     
 }
@@ -169,14 +169,14 @@ main .sun{
     background-color: #FF0000;
     padding: 5px;
     height: 40px;
-    width: 250px;
+    width: 300px;
     font-weight: bolder;
 }
 .totais{
     background-color: transparent;
     padding: 5px;
     height: auto;
-    width: 250px;
+    width: 300px;
     /*font-weight: bolder;*/
     display: flex;
     align-items: center;
@@ -214,8 +214,11 @@ main .sun{
     padding-top: 10px;
     font-family: 'Oswald';
 }
+.item a{
+    color: black;
+}
 .desc{
-    width: 210px;
+    width: 250px;
     padding-left: 20px;
     text-transform:capitalize;
     border-right: 1px solid black;
@@ -227,7 +230,12 @@ main .sun{
 }
 .val{
     text-align: center;
-    width: 80px;
+    width: 100px;
+}
+.id{
+    text-align: center;
+    width: 85px;
+    border-right: 1px solid black;
 }
 h2{
     font-family: 'Koulen';
@@ -239,7 +247,7 @@ footer{
     bottom: 0;
     background-color: #315E32;
     height: 30px;
-    width: 500px;
+    width: 600px;
     display: flex;
 }
 /*=========MENU=============*/
@@ -281,4 +289,103 @@ footer{
 .menu-mobile ul li button:hover{
     color: #8d8b8b;
  
+}
+/*============== MODAL =====================*/
+main dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    height: 80%;
+    width: 40%;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    text-align: center;
+    font-family: 'Koulen';
+    padding: 0;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+main dialog .p{
+    text-align: center;
+    font-size: 35pt;
+    margin-top: 0;
+    padding-top: 0;
+    border-bottom: 1px solid black;
+}
+main dialog .userModal{
+    height: auto;
+    align-items: center;
+    padding: 0 35px 0 35px;
+}
+main dialog .userModal p{
+    font-size: 13pt;
+}
+main dialog .formModal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+main dialog .divModal{
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+}
+main dialog .divModal input{
+    border-color: black;
+    background-color: transparent;
+    height: 25px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+}
+main dialog .formModal button{
+    height: 30px;
+    width: 150px;
+    background-color: #ff5c00;
+    border: none;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: 'koulen';
+    font-size: 13pt;
+    padding: 0;
+    letter-spacing: 2px;
+}
+main dialog .idModal{
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    width: 50px;
+    justify-content: space-around;
+}
+main dialog .idModal input{
+    border-color: black;
+    background-color: transparent;
+    height: 25px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+main dialog button{
+    height: 25px;
+    width: 120px;
+    background-color: #ff5c00;
+    border: none;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-family: 'koulen';
+    font-size: 12pt;
+    padding: 0;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+main dialog .item{
+
 }
