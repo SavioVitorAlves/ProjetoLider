@@ -27,7 +27,9 @@ app.get("/entrar", function(req, res){
 app.get("/html", function(req, res){
     res.sendFile(path.join(__dirname, "../Projeto Lider/index.html"));
 });
-
+app.get("/relatorio", function(req, res){
+    res.sendFile(path.join(__dirname, "../Projeto Lider/view/relatorioPDF.html"));
+});
 app.post("/add/:tipo", function(req, res){
     
     let price =  req.body.valor
@@ -63,6 +65,22 @@ app.get("/data", async (req, res)=>{
         res.status(500).json({ error: "Ocorreu um erro: " + error });
     }
 });
+// Rota para deletar um item pelo ID
+app.delete('/items/:id', async (req, res) => {
+    try {
+      const id = req.params.id;
+      const item = await Postagem.findByPk(id);
+  
+      if (!item) {
+        return res.status(404).json({ error: 'Item não encontrado!' });
+      }
+  
+      await item.destroy();
+      res.status(200).json({ message: 'Item deletado com sucesso!' });
+    } catch (error) {
+      res.status(500).json({ error: 'Erro ao deletar o item', error });
+    }
+  });
 
 app.get("/user", async (req, res)=>{
     try{
@@ -73,16 +91,40 @@ app.get("/user", async (req, res)=>{
     }
 });
 app.post("/addUser", (req, res)=>{
+    let adm = req.body.adm;
+    console.log(adm);
+    
+    let valida = false
+    if(adm !== undefined){
+        valida = true
+    }
+    
     User.create({
-        nome: "ADMIN",
-        senha: 123
+        nome: req.body.nomeUser,
+        senha: req.body.senhaUser,
+        atorizacao: valida
     }).then(function(){
         res.redirect("/html");
     }).catch(function(erro){
         res.send("Houve um erro: "+ erro)
     })
 })
-
+// Rota para deletar um usuario pelo ID
+app.delete('/deleteUser/:id', async (req, res) => {
+    try {
+      const id = req.params.id;
+      const item = await User.findByPk(id);
+  
+      if (!item) {
+        return res.status(404).json({ error: 'Item não encontrado!' });
+      }
+  
+      await item.destroy();
+      res.status(200).json({ message: 'Item deletado com sucesso!' });
+    } catch (error) {
+      res.status(500).json({ error: 'Erro ao deletar o item', error });
+    }
+  });
 app.post("/filtro", (req, res)=>{
     try{
         const mes = req.body.mes; // Captura o valor do input "mes"
@@ -105,6 +147,8 @@ app.post("/filtroAno", (req, res)=>{
         res.status(500).json({ error: "Ocorreu um erro: " + error });
     }
 });
+
+
 
 
 //PORTA DE FUNCIONAMENTO DO SERVIDOR
