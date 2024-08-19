@@ -3,6 +3,10 @@ const app = express();
 const bodyParser = require('body-parser')
 const Postagem = require("./models/Post")
 const User = require("./models/User")
+require('dotenv').config();
+
+//VARIAVEIS DE AMBIENTE
+const PORT = process.env.PORT;
 
 const path = require('path');
 const { log } = require("console");
@@ -152,7 +156,7 @@ app.post("/filtroAno", (req, res)=>{
 
 
 //PORTA DE FUNCIONAMENTO DO SERVIDOR
-const PORT = 8081
+//const PORT = 8081
 app.listen(PORT, function(){
     console.log("Servidor Rodadno Na URL http://localhost:8081");
 });
