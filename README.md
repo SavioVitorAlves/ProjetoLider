@@ -35,6 +35,9 @@ $ npm install --save body parser
 # Instale as Lib para usar o banco PostgresSQL
 $ npm install pg
 
+# Caso for usar variaves de ambiente instale
+$ npm install dotenv
+
 # Execute a aplicação em modo de desenvolvimento
 $ nodemon index.js
 
