@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Fluxo de Caixa</title>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="website icon" type="jpg" href="http://localhost:8081/static/imgs/Lider.jpg"/>
+    <link rel="stylesheet" href="http://localhost:8081/static/css/index.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header class="child" id="cabecalho">
+            <div  class="arealogo">
+                <img  type="jpg" src="/static/imgs/lider-sem-fundo.jpg"/>
+            </div>
+            <h1>comercial Lider</h1>
+            <span class="material-symbols-outlined" style="font-size: 40px;" id="menu" onclick="ativaMenu()">menu</span>
+    </header>
+    <main>
+        <div class="menu-mobile" id="lista">
+            <ul >
+                <li><button id="usuario">usuario</button></li>
+                <li><button id="relatorio">Relatorio diario</button></li>
+                <li><button id="close">sair</button></li>
+            </ul> 
+        </div>
+        <dialog id="modal">
+            <p class="p">Usuarios</p>
+            <div id="userModal" class="userModal">
+
+            </div>
+            <group style="margin-bottom: 15px; padding: 0 30px 0 30px;" >
+                <h3>Novo Usuarios</h3>
+                <form id="novoUsuario" action="/addUser" method="post" style="padding: 0 30px 0 30px;">
+                    <div class="formModal">
+                        <div class="divModal" >
+                            <label for="nomeUser">Nome do Usuario</label>
+                            <input type="text" id="nomeUser" name="nomeUser">
+                        </div>
+                        <div class="divModal">
+                            <label for="senhaUser">Senha do Usuario</label>
+                            <input type="password" id="senhaUser" name="senhaUser">
+                        </div>
+                    </div>
+                    <div class="formModal">
+                        <div>
+                            <input type="checkbox" id="adm" name="adm">
+                            <label for="passUser">Tornar Adiministrador</label>
+                        </div>
+                        <button type="submit" id="adicionar">Adicionar</button>
+                    </div>
+                </form>
+            </group>
+            <group style="padding: 0 30px 0 30px; margin-bottom: 15px;">
+                <h3>Atualizar Usuarios</h3>
+                <form id="atualizarUsuario" action="/addUser" method="post">
+                    <div class="formModal" style="padding: 0 30px 0 30px;">
+                        <div class="idModal">
+                            <label for="idUser">id</label>
+                            <input type="number" id="idUser" name="idUser">
+                        </div>
+                        <div class="divModal">
+                            <label for="nomeUser">Nome do Usuario</label>
+                            <input type="text" id="nomeUserUpdate" name="nomeUser" style="width: 150px;">
+                        </div>
+                        <div class="divModal">
+                            <label for="senhaUser">Senha do Usuario</label>
+                            <input type="password" id="senhaUserUpdate" name="senhaUser" style="width: 150px;">
+                        </div>
+                    </div>
+                    <div class="formModal">
+                        <div>
+                            <input type="checkbox" id="updateAdm" name="adm">
+                            <label for="passUser">Tornar Adiministrador</label>
+                        </div>
+                        <button type="submit" id="atualizar">Atualizar</button>
+                    </div>
+                </form>
+            </group>
+            <button type="submit" id="cancell">cancelar</button>
+        </dialog>
+        <section class="caixa">
+            <div class="main">
+                <h2>Caixa Aberto</h2>
+                <form id="myForm" class="inf"  method="POST">
+                    <input class="descricao" type="text" id="task_name" name="descricao" placeholder="Descrição (opcional)"/>
+                    <div class="inf_data">
+                        <input class="descricao2" type="date" id="task_name" name="data" placeholder="Data"/>
+                        <input class="descricao3" type="number" id="valor" min="0" step="0.01" name="valor" placeholder="Valor:" required/>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <button class="operacao" id="sum" onclick="">+</button>
+                <button class="operacao2" id="subtract" onclick="">-</button>
+            </div>
+            <nav >
+                <a href="http://localhost:8081/static/view/mensal.html" class="confg" id="btn-02">Relatorio Mensal</a>
+                <a href="http://localhost:8081/static/view/anual.html" class="confg" id="btn-03">Relatorio Anual</a>
+                <a class="confg" id="btn-04">Notinha</a>
+            
+            </nav>
+        </section>
+        <section class="sun">
+                <group class="total">
+                    <div class="soma">
+                        <center>Entrada Diaria
+                        <div id="resultado" ></div>
+                    </div>
+                    <div class="soma2"> 
+                        <center>Saida Diaria
+                        <div id="resultado2" ></div>
+                        
+                    </div>
+                </group>
+                <div class="transacoes" id="sale">
+                    
+                </div>
+                <footer>
+                    <div class="totais">
+                        <p>Entrada Mensal</p>
+                        <div id="input" ></div>
+                    </div>
+                    <div class="totais"> 
+                        <p>Saida Mensal</p>
+                        <div id="output" ></div>
+                    </div>
+                </footer>   
+        </section>
+    </main>
+    <script src="http://localhost:8081/static/controller/index.js"></script>
+    <script src="http://localhost:8081/static/controller/database.js"></script>
+    <script src="http://localhost:8081/static/controller/dialog.js"></script>
+    
+</body>
+</html>

@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 
 // Servindo arquivos estáticos (CSS, JS, Imagens)
 //app.use(express.static(path.join(__dirname, '../Projeto Lider')));
-app.use('/static', express.static(path.join(__dirname, '../Projeto Lider')));
+app.use('/static', express.static(path.join(__dirname, '../Frontend')));
 
 
 //ROTAS
@@ -26,13 +26,13 @@ app.get("/", function(req, res){
 });
 
 app.get("/entrar", function(req, res){
-    res.sendFile(path.join(__dirname, "../Projeto Lider/view/tela_login.html"));
+    res.sendFile(path.join(__dirname, "../Frontend/view/tela_login.html"));
 });
 app.get("/html", function(req, res){
-    res.sendFile(path.join(__dirname, "../Projeto Lider/index.html"));
+    res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 app.get("/relatorio", function(req, res){
-    res.sendFile(path.join(__dirname, "../Projeto Lider/view/relatorioPDF.html"));
+    res.sendFile(path.join(__dirname, "../Frontend/view/relatorioPDF.html"));
 });
 app.post("/add/:tipo", function(req, res){
     

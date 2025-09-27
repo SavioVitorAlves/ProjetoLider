@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="Projeto Lider/imgs/Lider.jpg" />
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="ProjetoLider/Frontend/imgs/Lider.jpg" />
 </h1>
 <h1 align="center">Projeto Lider</h1>
 <p align="center"> Projeto Lider, projeto desenvolvido para o comercial Lider de Santa Fé, o projeto tem o intuito de armazenar as vendas do dia do comercio e assim poder receber relatorios e analises 
@@ -41,7 +41,8 @@ $ npm install dotenv
 # Execute a aplicação em modo de desenvolvimento
 $ nodemon index.js
 
-# A aplicação inciará na porta:8081 - acesse <http://localhost:8081>
+# A aplicação inciará na porta:8081 - acesse 
+$ <http://localhost:8081>
 ```
 # Link sobre Node js
 https://1drv.ms/t/s!AiEa_cXwt9fCjZY7dF7x57bWhgEE0Q?e=3OLnU8
